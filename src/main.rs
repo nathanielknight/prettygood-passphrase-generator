@@ -6,7 +6,9 @@ include!(concat!(env!("OUT_DIR"), "/words.rs"));
 fn main() {
     let rng = &mut thread_rng();
     println!(
-        "{} {} {}",
+        "{} {} {} {} {}",
+        WORDS.choose(rng).unwrap(),
+        WORDS.choose(rng).unwrap(),
         WORDS.choose(rng).unwrap(),
         WORDS.choose(rng).unwrap(),
         WORDS.choose(rng).unwrap(),
