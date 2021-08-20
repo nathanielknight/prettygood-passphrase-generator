@@ -20,7 +20,7 @@ fn format_wordsfile(words: &[String]) -> String {
         .collect::<Vec<String>>()
         .join(", ");
     format!(
-        "pub const WORDS: [&str; {}] = [{}];",
+        "/// The word list.\npub const WORDS: [&str; {}] = [{}];",
         wordcount, wordline
     )
 }
