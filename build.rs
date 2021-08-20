@@ -12,7 +12,7 @@ fn load_words() -> Vec<String> {
         .collect()
 }
 
-fn format_wordsfile(words: &Vec<String>) -> String {
+fn format_wordsfile(words: &[String]) -> String {
     let wordcount = words.len();
     let wordline = words
         .iter()
@@ -20,7 +20,7 @@ fn format_wordsfile(words: &Vec<String>) -> String {
         .collect::<Vec<String>>()
         .join(", ");
     format!(
-        "pub const WORDS: [&'static str; {}] = [{}];",
+        "pub const WORDS: [&str; {}] = [{}];",
         wordcount, wordline
     )
 }
