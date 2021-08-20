@@ -1,16 +1,5 @@
-use rand::seq::SliceRandom;
-use rand::thread_rng;
-
-include!(concat!(env!("OUT_DIR"), "/words.rs"));
+use ppg::generate;
 
 fn main() {
-    let rng = &mut thread_rng();
-    println!(
-        "{} {} {} {} {}",
-        WORDS.choose(rng).unwrap(),
-        WORDS.choose(rng).unwrap(),
-        WORDS.choose(rng).unwrap(),
-        WORDS.choose(rng).unwrap(),
-        WORDS.choose(rng).unwrap(),
-    );
+    println!("{}", generate().unwrap());
 }

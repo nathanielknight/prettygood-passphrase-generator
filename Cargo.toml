@@ -9,5 +9,16 @@ repository = "https://bitbucket.org/nathanielknight/ppg"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "ppg"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ppg"
+path = "src/main.rs"
+
+
 [dependencies]
 rand = "0.7.3"
+
+
